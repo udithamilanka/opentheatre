@@ -1,0 +1,59 @@
+.column1 {
+    margin-left: 5%;
+    float: center;
+    width: 90%;
+}
+
+.column2 {
+    margin: 0 auto;
+    float: center;
+    width: 90%;
+}
+
+.list{
+    width: 100%;
+    top: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(49, 55, 68);
+}
+
+.listitems{
+    display: inline;
+}
+
+.listitems a{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.listitems a:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.active{
+background-color: brown;
+}
+
+.heading{
+    font-size: 25px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.listitems2{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.wins{
+    padding-left: 45px;
+}
+
+.winimage{
+    max-width: 40%;
+    padding-left: 2.5%;
+    padding-right: 5%;
+}

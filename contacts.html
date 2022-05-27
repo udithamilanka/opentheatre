@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contacts.css">
+    <script src="contacts.js" defer></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('j24FYhLQpMQO49Rqc');
+        })();
+      </script>
+      <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_jhcth2e', 'template_pwec196', this)
+                    .then(function() {
+                        alert('Thank you for contacting us')
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        alert('Failed',error)
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+      </script>
+
+</head>
+<body>
+    <div class="column1">
+        <ul>
+            <li> <a href="index.html" id="home">Home</a></li>
+            <li> <a href="academics.html">Academicss</a></li>
+             <li> <a href="gallery.html">Gallery</a></li>
+             <li> <a href="staff.html">Staff</a></li>
+            <li> <a href="awards.html">Awards</a></li>
+            <li> <a class="active" href="contacts.html">Contacts</a></li>
+        </ul>
+    </div>
+    <div class="column2">
+
+        <p class="normaltext">
+            Get Ahold of Us :
+        </p>
+
+        <div class="container">
+            <form id="contact-form">
+            <input type="hidden" name="contact_number">
+
+            <label for="user_name">Name</label>
+            <input type="text" name="user_name" placeholder="Your name...">
+        
+            <label for="user_email">Email</label>
+            <input type="text" name="user_email" placeholder="Your email...">
+        
+            <label for="message">Message</label>
+            <textarea name="message" placeholder="Talk with us..." style="height:200px"></textarea>
+        
+            <input type="submit" value="Send">
+        
+            </form>
+        </div> <br>
+
+        <p class="normaltext1">
+            Contact Us Through Telephone :<br>
+        </p>
+        <p class="normaltext">
+            071 288  7571
+        </p><br>
+
+        <p class="normaltext1">
+            Contact Us Through Email :<br>
+        </p>
+        <p class="normaltext">
+            opentheatreac@gmail.com
+        </p><br>
+
+        <p class="normaltext1">
+            Contact Us Through Facebook :<br>
+        </p>
+        <p class="normaltext">
+            OpenTheatre Performing Arts Academy
+        </p><br>
+
+        <p class="normaltext1">
+            Main Location :<br>
+        </p>
+        <p class="normaltext">
+            833/4A,<br>
+            Peradeniya Road,<br>
+            Kandy,<br>
+            Sri Lanka.
+        </p><br>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.4201872726035!2d80.61547382923214!3d7.277120129974083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3694fee7c4b8b%3A0x2f5b4c1277dea71c!2sOpen%20Theatre%20Performing%20Arts%20Academy!5e0!3m2!1sen!2slk!4v1652689128989!5m2!1sen!2slk" width="1200" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br><br>
+    </div>
+</body>
